@@ -1,0 +1,56 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Playfair Display', serif;
+  background: #fdf5e6;
+  color: #5e4235;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+h1 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 3em;
+  margin-bottom: 0.3em;
+}
+
+.container {
+  text-align: center;
+  padding: 2em;
+  border: 2px solid #d3bfa3;
+  background: #fffaf0;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+.button {
+  display: inline-block;
+  margin-top: 1em;
+  padding: 10px 20px;
+  font-size: 1em;
+  background-color: #c1978e;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  text-decoration: none;
+  font-family: 'Dancing Script', cursive;
+}
+
+.hearts::before, .hearts::after {
+  content: "💗 💓 💖 💘 💝";
+  font-size: 2em;
+  position: absolute;
+  animation: floatHearts 6s infinite linear;
+  top: 10%;
+  left: 10%;
+}
+
+@keyframes floatHearts {
+  0% {transform: translateY(0);}
+  100% {transform: translateY(-100vh);}
+}
